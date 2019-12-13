@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入vue的核心外部文件-->>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <a>{{server.name}}</a>
+       <br/>
+       <input type="radio"value="baidu" name="web" v-model="ename" v-on:click="change"/>百度
+       <input type="radio"value="sina" name="web"v-model="ename" v-on:click="change"/>新浪
+       <input type="radio"value="tt" name="web"v-model="ename" v-on:click="change"/>腾讯
+     <!--不同单选框，触发不同a标签地址和inneHTML的改变-->
+    </div>
+    <script>
+       var app =new Vue({
+         el:"#app",
+         data:{
+             server:{
+                 name:"",
+                 address:""
+             },
+             ename:""
+         },
+         methods:{
+             change:function(){
+                 alert(this.ename);//this就是调用这个方法的调用者对象，在这里this就是vue实例
+             }
+         }
+       });
+    </script>
+</body>
+</html>

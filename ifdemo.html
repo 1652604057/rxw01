@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <input type="radio" value="lin"name="star" v-model="name"/>林书豪<br/>
+      <input type="radio" value="pao" name="star"v-model="name"/>咆哮魔<br/>
+      <input type="radio" value="qiao"name="star" v-model="name"/>乔碧螺<br/>
+       <img v-if="name=='lin'"style="width:200px;height:300px;" src=" http://pic1.zhimg.com/50/v2-d0ed1dec01de5970ee9a023dacbff0c0_hd.jpg"/>
+       <img v-else-if="name=='pao'"style="width:200px;height:300px;"src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3051496237,3292909283&fm=26&gp=0.jpg" /> 
+       <img v-else-if="name=='qiao'"style="width:200px;height:300px;"src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1979104855,3743311453&fm=26&gp=0.jpg"/>
+       </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+               show:'false',
+               name:""
+            }
+        });
+    </script>
+</body>
+</html>

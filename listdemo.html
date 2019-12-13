@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+     <table border="1">
+         <tr>
+             <th>商品名称</th>
+             <th>价格</th>
+         </tr>
+         <tr v-for="good in goods">
+             <td>{{good.goodName}}</td>
+             <td>{{good.price}}</td>
+         </tr>
+     </table>
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                goods:[
+                    {goodName:"瓶子",price:0.1},
+                    {goodName:"aj",price:1999},
+                    {goodName:"故事会",price:16},
+                    {goodName:"茅台酒",price:1599}
+                ]           
+            }
+        });
+    </script>
+</body>
+</html>
